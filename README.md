@@ -12,14 +12,14 @@ Check [this link](http://nodejs.org/download/) for windows installation
 
 After installation, check the `nodejs` version:
 
-```nodejs
+```javascript
 $ node --version
 v0.10.29
 ```
 
 ## Simple hello world web app:
 
-```nodejs
+```javascript
 var http = require('http'); // add the http module
 var server = http.createServer(function (request, response) {
 	// body...
@@ -35,13 +35,13 @@ console.log("render localhost:3000 on your browser!");
 ## NPM package management
 to start with the package management in node execute the command:
 
-```nodejs
+```javascript
 npm init
 ```
 
 It ask you some questions like `appname`, `version` and so on and will generate a `package.json` file in your directory that looks as below:
 
-```nodejs
+```javascript
 {
   "name": "NodeGettingStarted",
   "version": "1.0.0",
@@ -59,12 +59,12 @@ Its just a `json` file, and you can change the values based on your needs.
 ### Installing packages
 You can install any package simply by using `npm install`:
 
-```nodejs
+```javascript
 npm install gulp --save
 ```
 after installing the package you can see a new directory in your project called `node_modules/gulp` which contains the module files, and the install command also update your `package.json` file with which defines your project needs this package as dependency:
 
-```nodejs
+```javascript
 
   "name": "NodeGettingStarted",
   ...,
@@ -74,8 +74,8 @@ after installing the package you can see a new directory in your project called 
 }
 ```
 
-Now you can even delete the `node_module` directory and you can build the project with all the dependencies via below command:
+Now you can even delete the `node_modules` directory and you can build the project with all the dependencies via below command:
 
-```nodejs
+```javascript
 npm install
 ```
