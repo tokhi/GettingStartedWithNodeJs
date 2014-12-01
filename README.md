@@ -41,7 +41,7 @@ npm init
 
 It ask you some questions like `appname`, `version` and so on and will generate a `package.json` file in your directory that looks as below:
 
-```javascript
+```json
 {
   "name": "NodeGettingStarted",
   "version": "1.0.0",
@@ -59,7 +59,7 @@ Its just a `json` file, and you can change the values based on your needs.
 ### Installing packages
 You can install any package simply by using `npm install`:
 
-```javascript
+```bash
 npm install gulp --save
 ```
 after installing the package you can see a new directory in your project called `node_modules/gulp` which contains the module files, and the install command also update your `package.json` file with which defines your project needs this package as dependency:
@@ -76,6 +76,33 @@ after installing the package you can see a new directory in your project called 
 
 Now you can even delete the `node_modules` directory and you can build the project with all the dependencies via below command:
 
-```javascript
+```bash
 npm install
 ```
+
+## What is express.js
+According to above `nodejs` basics you may find out that nodejs is quite tiny for building web applications. So for that it requires you to use `expre.js` instead.
+
+Express is a light-weight web application framework to help organize your web application into an MVC architecture on the server side. You can use a variety of choices for your templating language (like EJS, Jade, and Dust.js).
+
+You can then use a database like `MongoDB` with `Mongoose` (for modeling) to provide a backend for your `Node.js` application. `Express.js` basically helps you manage everything, from routes, to handling requests and views.
+
+
+### Express.js installation
+To install express.js globally:
+```bash
+npm install  -g express
+```
+
+Mac users may needs to use `express-generator` for installation:
+
+```
+sudo npm install -g express-generator
+```
+After successfull installation you should be able to check the version:
+
+```
+$ express --version
+4.9.0
+```
+
