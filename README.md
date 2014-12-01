@@ -7,7 +7,7 @@ sudo add-apt-repository ppa:chris-lea/node.js
 sudo apt-get update
 sudo apt-get install nodejs
 ```
-Check [this link](http://nodejs.org/download/) for windows installation
+Check [this link](http://nodejs.org/download/) for windows installation.
 
 
 After installation, check the `nodejs` version:
@@ -31,6 +31,15 @@ var server = http.createServer(function (request, response) {
 server.listen(3000);
 console.log("render localhost:3000 on your browser!");
 ```
+
+To Run you first app:
+
+```
+$ node hello.js
+render localhost:3000 on your browser!
+```
+
+Access the app on [http://localhost:3000](http://localhost:3000)
 
 ## NPM package management
 to start with the package management in node execute the command:
@@ -94,7 +103,7 @@ To install express.js globally:
 npm install  -g express
 ```
 
-Mac users may needs to use `express-generator` for installation:
+Mac users may need to use `express-generator` for installation:
 
 ```
 sudo npm install -g express-generator
