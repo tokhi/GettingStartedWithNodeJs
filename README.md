@@ -1,4 +1,4 @@
-**Table of Contents**  *Up and running with Nodejs & express.js
+**Table of Contents**  *Up and running with Nodejs & Expresjs*
 
 - [Up and running with Nodejs & express.js](#)
 	- [Simple nodejs hello world app:](#)
