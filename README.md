@@ -1,4 +1,14 @@
-# Up and running with Nodejs & express.js
+**Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
+
+- [Up and running with Nodejs & express.js](#)
+	- [Simple nodejs hello world app:](#)
+	- [NPM package management](#)
+		- [Installing packages](#)
+	- [What is express.js](#)
+		- [Express.js installation](#)
+		- [Simple expressjs hello world app:](#)
+
+# Up and running with Nodejs & Expresjs
 install nodejs under ubuntu:
 
 ```bash
