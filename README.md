@@ -6,7 +6,7 @@
 		- [Installing packages](#)
 	- [What is express.js](#)
 		- [Express.js installation](#)
-		- [Simple expressjs hello world app:](#)
+		- [Simple expressjs hello world app](#Simple expressjs hello world app)
 
 # Up and running with Nodejs & Expresjs
 install nodejs under ubuntu:
@@ -33,7 +33,7 @@ $ node --version
 v0.10.29
 ```
 
-## Simple nodejs hello world app:
+## Simple nodejs hello world app
 
 ```javascript
 var http = require('http'); // add the http module
