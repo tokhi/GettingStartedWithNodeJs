@@ -144,15 +144,15 @@ var server = app.listen(3000, function () {
 	console.log("Listening on port 3000");
 })
 ```
-As you see in the above example we even don't need to specify the mime type, so this means building applications in `expressjs` a little bit simpler than `node`.
+As you can see in the above example we even don't need to specify the mime type, so this means building applications in `expressjs` is a little bit simpler than `node`.
 
 To run the app:
 
-```
+```bash
 $ node app.js # Listening on port 3000
 ```
-Access the app on [http://localhost:3000](http://localhost:3000)
+Access the app on [http://localhost:3000](http://localhost:3000).
 
-You can find the rest of the methods that you can use in `express` in the documentation page ((API Reference)[http://expressjs.com/4x/api.html]).
+You can find the rest of the methods that you can use in `express` in the documentation page ([API Reference](http://expressjs.com/4x/api.html).
 
 
