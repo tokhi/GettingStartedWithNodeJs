@@ -1,4 +1,4 @@
-**Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
+**Table of Contents**  *Up and running with Nodejs & express.js
 
 - [Up and running with Nodejs & express.js](#)
 	- [Simple nodejs hello world app:](#)
