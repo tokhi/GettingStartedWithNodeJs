@@ -121,7 +121,7 @@ $ express --version
 4.9.0
 ```
 
-## Simple expressjs hello world app:
+### Simple expressjs hello world app:
 The first thing you need to do is to create the package and install `expressjs`:
 
 ```bash
@@ -153,6 +153,6 @@ $ node app.js # Listening on port 3000
 ```
 Access the app on [http://localhost:3000](http://localhost:3000).
 
-You can find the rest of the methods that you can use in `express` in the documentation page ([API Reference](http://expressjs.com/4x/api.html).
+You can find the rest of the methods that you can use in `express` in the documentation page ([API Reference](http://expressjs.com/4x/api.html)).
 
 
