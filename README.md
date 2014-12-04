@@ -190,16 +190,16 @@ var server = app.listen(3000, function () {
 	console.log("Listening on port 3000");
 })
 ```
-`/help` route only redners a message.
+- `/help` route only redners a message.
 
-`/hello/:name?/:position?` here the `:name?` and ':position?' are the parameters so you can pass any parameter here and then you could get the parameters from the request via `request.params.name` and `request.params.position`
+- `/hello/:name?/:position?` here the `:name?` and `:position?` are the parameters so you can pass any parameter here and then you could get the parameters from the request via `request.params.name` and `request.params.position`
 
-`*` route triggers any none supported url that you pass.
+- `*` route triggers any none supported url that you pass.
 
 Run the app via `node app.js` and click the links to check the routes that we have just created:
 
-> [http://localhost:3000/help](http://localhost:3000/help)
-> [http://localhost:3000/hello/ahmad/student](http://localhost:3000/hello/ahmad/student)
-> [http://localhost:3000/foo](http://localhost:3000/foo)
+- [http://localhost:3000/help](http://localhost:3000/help)
+- [http://localhost:3000/hello/ahmad/student](http://localhost:3000/hello/ahmad/student)
+- [http://localhost:3000/foo](http://localhost:3000/foo)
 
 
