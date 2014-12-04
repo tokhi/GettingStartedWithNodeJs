@@ -1,13 +1,3 @@
-**Table of Contents**  *Up and running with Nodejs & Expresjs*
-
-- [Up and running with Nodejs & express.js](#)
-	- [Simple nodejs hello world app:](#)
-	- [NPM package management](#)
-		- [Installing packages](#)
-	- [What is express.js](#)
-		- [Express.js installation](#)
-		- [Simple expressjs hello world app](#Simple expressjs hello world app)
-
 # Up and running with Nodejs & Expresjs
 install nodejs under ubuntu:
 
@@ -164,5 +154,52 @@ $ node app.js # Listening on port 3000
 Access the app on [http://localhost:3000](http://localhost:3000).
 
 You can find the rest of the methods that you can use in `express` in the documentation page ([API Reference](http://expressjs.com/4x/api.html)).
+
+### Playing with routes
+Via routes you can render different pages to your clients, as you see in above there is only a `/` route in the app, here we are going to add some more routes.
+
+`app.js`:
+
+```
+var express = require('express'); // the required library
+var app = express();
+
+// root route
+app.get('/', function (request, response) {
+	// body...
+	response.send('Hey Express!');
+});
+
+
+app.get('/help', function (request, response) {
+	response.send('help page is under constrcution!');
+});
+
+app.get('/hello/:name?/:position?', function (request, response) {
+	var name = request.params.name
+	var position = request.params.position
+	response.send('Hey <b>'+ name + '</b>,<br/> you are a great <b>' + position + '</b>');
+});
+
+app.get('*', function (request, response) {
+	response.send('Oops, route not supported!');
+});
+
+
+var server = app.listen(3000, function () {
+	console.log("Listening on port 3000");
+})
+```
+`/help` route only redners a message.
+
+`/hello/:name?/:position?` here the `:name?` and ':position?' are the parameters so you can pass any parameter here and then you could get the parameters from the request via `request.params.name` and `request.params.position`
+
+`*` route triggers any none supported url that you pass.
+
+Run the app via `node app.js` and click the links to check the routes that we have just created:
+
+> [http://localhost:3000/help](http://localhost:3000/help)
+> [http://localhost:3000/hello/ahmad/student](http://localhost:3000/hello/ahmad/student)
+> [http://localhost:3000/foo](http://localhost:3000/foo)
 
 
