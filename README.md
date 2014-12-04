@@ -160,7 +160,7 @@ Via routes you can render different pages to your clients, as you see in above t
 
 `app.js`:
 
-```
+```javascript
 var express = require('express'); // the required library
 var app = express();
 
