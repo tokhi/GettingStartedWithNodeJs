@@ -202,7 +202,7 @@ Run the app via `node app.js` and click the links to check the routes that we ha
 - [http://localhost:3000/hello/ahmad/student](http://localhost:3000/hello/ahmad/student)
 - [http://localhost:3000/foo](http://localhost:3000/foo)
 
-### Using Templates:
+### Using Templates
 So far we have used `response.send(..)` for rendering content, but this is not the right way to do. Express let you to use templating engines to create powerful web pages; so you can choose which template engine you choose. By default there are two template engin options `jade` and `EJS`. `EJS` is more similar to html so thats why we prefer to use `EJS` for this tutorial.
 
 To install `EJS` execute:

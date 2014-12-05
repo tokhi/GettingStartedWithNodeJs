@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title><%= title %></title>
+
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+
+
+
+</head>
+<body>
+	<div class="container">
+		<h1><%= title %></h1>
+
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua.
+		</p>
+		<p>People names:
+			<ul>
+				<% for( var i = 0 ; i < names.length ; i++){ %>
+				<li><%= names[i] %></li>
+				<% } %>
+			</ul>
+		</p>
+	</div>
+	<% include partials/jsdefaults.ejs %>
+</body>
+</html>
