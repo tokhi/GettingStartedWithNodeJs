@@ -18,8 +18,7 @@ app.get('/', function (request, response) {
 
 app.get('/help', function (request, response) {
 	response.render('default', {
-		title : 'Help page',
-		names: ['Ahmad', 'Mahmood', 'Kalbi', 'Maqsood']
+		title : 'Help page'
 	});
 });
 

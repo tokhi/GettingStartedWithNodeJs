@@ -19,6 +19,7 @@
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 			tempor incididunt ut labore et dolore magna aliqua.
 		</p>
+		<% if(typeof(names) !== 'undefined') { %>
 		<p>People names:
 			<ul>
 				<% for( var i = 0 ; i < names.length ; i++){ %>
@@ -26,6 +27,7 @@
 				<% } %>
 			</ul>
 		</p>
+		<% } %>
 	</div>
 	<% include partials/jsdefaults.ejs %>
 </body>
