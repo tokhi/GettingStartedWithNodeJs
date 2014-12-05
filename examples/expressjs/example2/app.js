@@ -3,6 +3,9 @@ var app = express();
 // view engine
 app.set('view engine', 'ejs');
 
+// adding a local variable
+app.locals.welcomeMsg = "Welcome to the "
+
 // root route
 app.get('/', function (request, response) {
 	// body...

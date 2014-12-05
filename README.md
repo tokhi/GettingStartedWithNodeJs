@@ -315,6 +315,22 @@ and you can include them to your view as below:
 </body>
 </html>
 ```
+
+#### Passing local variables to view
+You can pass local variable to your view with out defining them in a specific route:
+
+```javascript
+// adding a local variable
+app.locals.welcomeMsg = "Welcome to the "
+```
+and then you can add them to your view
+
+```html
+<h1><%= welcomeMsg %></h1>
+```
+Click [here](https://github.com/tokhi/GettingStartedWithNodeJs/blob/master/examples/expressjs/example2/app.js) to see the complete example.
+
+
 ---
 More parts coming next...
 
