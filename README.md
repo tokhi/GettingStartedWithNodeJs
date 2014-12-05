@@ -203,7 +203,7 @@ Run the app via `node app.js` and click the links to check the routes that we ha
 - [http://localhost:3000/foo](http://localhost:3000/foo)
 
 ### Using Templates:
-So far we have used `response.send(..)` for rendering content, but this is not the right way to do. Express let you to use templating engines to create powerful web pages; so you can choose which template engine you pick to choose. By default there are two template engin options `jade` and `EJS`. `EJS` is more similar to html so thats why we prefer to use `EJS` for this tutorial.
+So far we have used `response.send(..)` for rendering content, but this is not the right way to do. Express let you to use templating engines to create powerful web pages; so you can choose which template engine you choose. By default there are two template engin options `jade` and `EJS`. `EJS` is more similar to html so thats why we prefer to use `EJS` for this tutorial.
 
 To install `EJS` execute:
 ```
@@ -235,7 +235,7 @@ app.get('/', function (request, response) {
 
 //...
 ```
-To render the content now we have used the `response.render(...)` and you can pass the variable which you like to pass to the view.
+To render the content now we have used the `response.render(...)` and you can define the variable which you like to pass to the view.
 
 Our default view: `default.ejs`:
 
@@ -261,6 +261,8 @@ Our default view: `default.ejs`:
 </html>
 ```
 restart the server and then you see the changes on `localhost:3000`
+
+
 ---
 More parts coming next...
 
