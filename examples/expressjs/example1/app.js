@@ -1,10 +1,15 @@
 var express = require('express'); // the required library
 var app = express();
+// view engine
+app.set('view engine', 'ejs');
 
 // root route
 app.get('/', function (request, response) {
 	// body...
-	response.send('Hey Express!');
+	response.render('default', {
+		title : 'Home page',
+		names: ['Ahmad', 'Mahmood', 'Kalbi', 'Maqsood']
+	});
 });
 
 

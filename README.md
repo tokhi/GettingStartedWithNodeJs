@@ -202,6 +202,65 @@ Run the app via `node app.js` and click the links to check the routes that we ha
 - [http://localhost:3000/hello/ahmad/student](http://localhost:3000/hello/ahmad/student)
 - [http://localhost:3000/foo](http://localhost:3000/foo)
 
+### Using Templates:
+So far we have used `response.send(..)` for rendering content, but this is not the right way to do. Express let you to use templating engines to create powerful web pages; so you can choose which template engine you pick to choose. By default there are two template engin options `jade` and `EJS`. `EJS` is more similar to html so thats why we prefer to use `EJS` for this tutorial.
+
+To install `EJS` execute:
+```
+$ npm install ejs --save
+```
+So after installation you can add it to your application via:
+
+```
+app.set('view engine', 'ejs);
+```
+So now you need to create a new directory in your project called `views` and create a file called `default.ejs`
+
+This is how our root route look like now:
+
+```javascript
+//...
+
+// view engine
+app.set('view engine', 'ejs');
+
+// root route
+app.get('/', function (request, response) {
+	// body...
+	response.render('default', {
+		title : 'Home page',
+		names: ['Ahmad', 'Mahmood', 'Kalbi', 'Maqsood']
+	});
+});
+
+//...
+```
+To render the content now we have used the `response.render(...)` and you can pass the variable which you like to pass to the view.
+
+Our default view: `default.ejs`:
+
+```html
+<html>
+<head>
+	<meta charset="utf-8">
+	<title><%= title %></title>
+</head>
+<body>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua.
+	</p>
+	<p>Array display:
+		<ul>
+			<% for( var i = 0 ; i <= names.length ; i++){ %>
+			<li><%= names[i] %></li>
+			<% } %>
+		</ul>
+	</p>
+
+</body>
+</html>
+```
+restart the server and then you see the changes on `localhost:3000`
 ---
 More parts coming next...
 
