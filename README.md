@@ -330,6 +330,27 @@ and then you can add them to your view
 ```
 Click [here](https://github.com/tokhi/GettingStartedWithNodeJs/blob/master/examples/expressjs/example2/app.js) to see the complete example.
 
+#### Conditional templates:
+You can also check if a variable is undefined or not in the view:
+
+```html
+<div class="container">
+	<h1><%= welcomeMsg %> <%= title %></h1>
+
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua.
+	</p>
+	<% if(typeof(names) !== 'undefined') { %>
+	<p>People names:
+		<ul>
+			<% for( var i = 0 ; i < names.length ; i++){ %>
+			<li><%= names[i] %></li>
+			<% } %>
+		</ul>
+	</p>
+	<% } %>
+</div>
+````
 
 ---
 More parts coming next...
