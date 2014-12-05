@@ -246,6 +246,7 @@ Our default view: `default.ejs`:
 	<title><%= title %></title>
 </head>
 <body>
+	<h1><%= title %></h1>
 	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 		tempor incididunt ut labore et dolore magna aliqua.
 	</p>
@@ -262,7 +263,58 @@ Our default view: `default.ejs`:
 ```
 restart the server and then you see the changes on `localhost:3000`
 
+#### Using Partials
+Its quite easy to include partials to your view, you just need to add your partials in the `views` directory and then include them in your view.
 
+Here we would like to add a `header` and `footer` for our template.
+
+We careate a directory under views: `/views/partials` and then create two partials called `/views/partials/header.ejs` and `/views/partials/footer.ejs`.
+
+`/views/partials/header.ejs`:
+
+```html
+<header> 
+	<p> page header</p>
+</header>
+```
+
+`/views/partials/footer.ejs`:
+
+```html
+<header> 
+	<p> page header</p>
+</header>
+```
+
+and you can include them to your view as below:
+
+```html
+<html>
+<head>
+	<meta charset="utf-8">
+	<title><%= title %></title>
+</head>
+<body>
+	<!-- includes partial header -->
+	<% include partials/header.ejs %>
+
+	<h1><%= title %></h1>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua.
+	</p>
+	<p>Array display:
+		<ul>
+			<% for( var i = 0 ; i < names.length ; i++){ %>
+			<li><%= names[i] %></li>
+			<% } %>
+		</ul>
+	</p>
+
+	<!-- includes partial footer -->
+	<% include partials/footer.ejs %>
+</body>
+</html>
+```
 ---
 More parts coming next...
 

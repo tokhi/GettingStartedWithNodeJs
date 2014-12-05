@@ -5,16 +5,19 @@
 	<title><%= title %></title>
 </head>
 <body>
+	<% include partials/header.ejs %>
+	<h1><%= title %></h1>
 	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 		tempor incididunt ut labore et dolore magna aliqua.
 	</p>
 	<p>Array display:
 		<ul>
-			<% for( var i = 0 ; i <= names.length ; i++){ %>
+			<% for( var i = 0 ; i < names.length ; i++){ %>
 			<li><%= names[i] %></li>
 			<% } %>
 		</ul>
 	</p>
 
+	<% include partials/footer.ejs %>
 </body>
 </html>
