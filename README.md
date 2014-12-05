@@ -354,7 +354,7 @@ You can also check if a variable is undefined or not in the view:
 ````
 
 ### Modularize routes
-you can alos modularize routes into a sperate file, so to do that create another directory e.g; `routes` under your app root directory and the create a javascript file e.g; `routes/index.js`:
+You can alos modularize routes and put them in a sperate file, so to do that create another directory e.g; `routes` under your app root directory and then create a javascript file e.g; `routes/index.js`:
 
 ```javascript
 // root route
@@ -402,6 +402,7 @@ var server = app.listen(3000, function () {
 	console.log("Listening on port 3000");
 })
 ```
+You can see the whole example [here](https://github.com/tokhi/GettingStartedWithNodeJs/tree/master/examples/expressjs/example3)
 
 ---
 More parts coming next...
