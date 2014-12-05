@@ -330,11 +330,12 @@ and then you can add them to your view
 ```
 Click [here](https://github.com/tokhi/GettingStartedWithNodeJs/blob/master/examples/expressjs/example2/app.js) to see the complete example.
 
-#### Conditional templates:
+#### Conditional templates
 You can also check if a variable is undefined or not in the view:
 
 ```html
 <div class="container">
+	<!--    local var   -    var -->
 	<h1><%= welcomeMsg %> <%= title %></h1>
 
 	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -351,6 +352,56 @@ You can also check if a variable is undefined or not in the view:
 	<% } %>
 </div>
 ````
+
+### Modularize routes
+you can alos modularize routes into a sperate file, so to do that create another directory e.g; `routes` under your app root directory and the create a javascript file e.g; `routes/index.js`:
+
+```javascript
+// root route
+exports.index = function (request, response) {
+	// body...
+	response.render('default', {
+		title : 'Home page',
+		names: ['Ahmad', 'Mahmood', 'Kalbi', 'Maqsood']
+	});
+}
+
+exports.help =  function (request, response) {
+	response.render('default', {
+		title : 'Help page'
+	});
+}
+
+exports.page404 = function (request, response) {
+	response.render('404',{
+		title: '404 page'
+	});
+}
+```
+As you can see we moved all the routes to that file.
+
+Now you shoud add the route file to your `app.js` via `require` and then call the specific route as below:
+
+`app.js`:
+
+```javascript
+var express = require('express'); // the required library
+var app = express();
+var routes = require('./routes')
+// view engine
+app.set('view engine', 'ejs');
+
+// adding a local variable
+app.locals.welcomeMsg = "Welcome to the "
+
+app.get('/', routes.index);
+app.get('/help', routes.help);
+app.get('*', routes.page404);
+
+var server = app.listen(3000, function () {
+	console.log("Listening on port 3000");
+})
+```
 
 ---
 More parts coming next...
