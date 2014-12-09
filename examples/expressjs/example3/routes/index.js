@@ -7,13 +7,11 @@ exports.index = function (request, response) {
 	});
 }
 
-
 exports.help =  function (request, response) {
 	response.render('default', {
 		title : 'Help page'
 	});
 }
-
 
 exports.page404 = function (request, response) {
 	response.render('404',{

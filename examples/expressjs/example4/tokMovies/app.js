@@ -23,6 +23,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
+app.use('/movies/:id', routes);
 app.use('/users', users);
 
 // the movie json file

@@ -406,7 +406,7 @@ You can see the whole example [here](https://github.com/tokhi/GettingStartedWith
 
 
 ### Content Structure
-
+Install express-generator:
 
 ```
 sudo npm install -g express-generator
