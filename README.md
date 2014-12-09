@@ -405,13 +405,13 @@ var server = app.listen(3000, function () {
 You can see the whole example [here](https://github.com/tokhi/GettingStartedWithNodeJs/tree/master/examples/expressjs/example3).
 
 
-
+### Content Structure
 
 
 ```
 sudo npm install -g express-generator
 ```
-create the project
+Create the project:
 
 ```
  express -e tokMovies
