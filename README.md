@@ -416,24 +416,68 @@ create the project
 ```
  express -e tokMovies
  ```
+This is a simple movie rating system which enables users to rate movies.
+First we start by parsing movies from a json file. You can see the json file [here](https://github.com/tokhi/GettingStartedWithNodeJs/tree/master/examples/expressjs/example4/tokMovies).
 
-  install dependencies:
+Install dependencies:
 
  ```
 $ cd tokMovies && npm install
 ```
 
- run the app:
+We parse the `json` data to a local variable as below:
+
+`app.js`:
+
+```javascript
+app.locals.moviesData = require('./movies.json');
+```
+This we can access it via `forEach` or `for` loop in the view:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<% include head.ejs %>
+
+<body id="page-top" class="index">
+
+    <!-- navigation -->
+    <% include nav.ejs %>
+    <% include header.ejs %>
+    <% include profolio.ejs %>
+    <% include about.ejs %>
+   	<% include contact.ejs %>
+    <% include footer.ejs %>
+    <div class="scroll-top page-scroll visible-xs visble-sm">
+        <a class="btn btn-primary" href="#page-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+    </div>
+    
+    <!-- accessing the json local variable -->
+    <% for(var i=1; i<moviesData.length; i++){ %>
+    <% include single_profolio.ejs %>
+    <% } %>
+
+   <% include jsfile.ejs %>
+
+</body>
+
+</html>
+
+```
+See the whole project [here](https://github.com/tokhi/GettingStartedWithNodeJs/tree/master/examples/expressjs/example4/tokMovies).
+
+Run the app:
  ```
  $ DEBUG=tokMovies ./bin/www
  ```
-Now if you browse `localhost:3000` you should see the welcome page.
-
-copy the `movies.json` to your project home directory.
+Now if you browse `localhost:3000` you should see the index page.
 
 
-Here for this example I have used [this free bootstrap template](http://startbootstrap.com/template-overviews/freelancer/)
 
+For this example I have used [this free bootstrap template](http://startbootstrap.com/template-overviews/freelancer/). 
 
 
 
