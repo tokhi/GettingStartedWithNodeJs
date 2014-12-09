@@ -402,7 +402,40 @@ var server = app.listen(3000, function () {
 	console.log("Listening on port 3000");
 })
 ```
-You can see the whole example [here](https://github.com/tokhi/GettingStartedWithNodeJs/tree/master/examples/expressjs/example3)
+You can see the whole example [here](https://github.com/tokhi/GettingStartedWithNodeJs/tree/master/examples/expressjs/example3).
+
+
+
+
+
+```
+sudo npm install -g express-generator
+```
+create the project
+
+```
+ express -e tokMovies
+ ```
+
+  install dependencies:
+
+ ```
+$ cd tokMovies && npm install
+```
+
+ run the app:
+ ```
+ $ DEBUG=tokMovies ./bin/www
+ ```
+Now if you browse `localhost:3000` you should see the welcome page.
+
+copy the `movies.json` to your project home directory.
+
+
+Here for this example I have used [this free bootstrap template](http://startbootstrap.com/template-overviews/freelancer/)
+
+
+
 
 ---
 More parts coming next...
