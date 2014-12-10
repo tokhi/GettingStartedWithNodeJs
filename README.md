@@ -10,7 +10,7 @@ $ sudo add-apt-repository ppa:chris-lea/node.js
 $ sudo apt-get update
 $ sudo apt-get install nodejs
 ```
-It installs current stable Node on the current stable Ubuntu. Quantal (12.10) users may need to install the `software-properties-common` package for the add-apt-repository command to work: 
+It installs current stable Node on the stable Ubuntu. Quantal (12.10) users may need to install the `software-properties-common` package for the add-apt-repository command to work: 
 
 ```
 sudo apt-get install software-properties-common
