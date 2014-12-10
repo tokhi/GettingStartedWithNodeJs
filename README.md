@@ -1,4 +1,7 @@
 # Up and running with Nodejs & Expresjs
+
+>Node.js® is a platform built on [Chrome's JavaScript runtime](https://code.google.com/p/v8/) for easily building fast, scalable network applications. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient, perfect for data-intensive real-time applications that run across distributed devices.
+
 install nodejs under ubuntu:
 
 ```bash
@@ -94,6 +97,56 @@ Now you can even delete the `node_modules` directory and you can build the proje
 ```bash
 $ npm install
 ```
+
+### Modules
+A module encapsulates related code into a single unit of code. When creating a module, this can be interpreted as moving all related functions into a file.
+
+A simple module demonstation:
+
+`greetings.js`:
+
+```javascript
+module.exports = {
+
+    sayHelloInEnglish: function() {
+        return "Hello";
+    },
+
+    sayHelloInSpanish: function() {
+        return "Hola";
+    },
+
+    sayHelloInPersian: function() {
+        return "Salam";
+    }
+};
+```
+#### Importing a module
+You can import a module using `require`:
+```javascript
+var greetings = require("./greetings.js");
+```
+
+This is how I imported the `greetings.js` to the simple `hello.js` example:
+
+```javascript
+var http = require('http'); // add the http module
+var greetings = require('./greetings.js');
+var server = http.createServer(function (request, response) {
+	// body...
+	response.writeHead(200, {"content-type" : "text/html"});
+	response.write("Hello In English: <b>" + greetings.sayHelloInEnglish());
+	response.write("<br/>Hello In Spanish: <b>" + greetings.sayHelloInSpanish());
+	response.write("<br/>Hello In Persian: <b>" + greetings.sayHelloInPersian());
+	response.end();
+}); // create a server 
+
+server.listen(3000);
+console.log("render localhost:3000 on your browser!");
+
+```
+Restart the server, then you should see the changes.
+See the full example [here](https://github.com/tokhi/GettingStartedWithNodeJs/tree/master/examples/nodejs/example2)
 
 ## What is express.js
 According to above `nodejs` basics you may find out that nodejs is quite tiny for building web applications. So for that it requires you to use `expre.js`.
@@ -480,6 +533,8 @@ Now if you browse `localhost:3000` you should see the index page.
 For this example I have used [this free bootstrap template](http://startbootstrap.com/template-overviews/freelancer/). 
 
 
+## Heroku Deployment
+coming soon...
 
 ---
 More parts coming next...
