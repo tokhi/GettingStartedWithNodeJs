@@ -10,5 +10,9 @@ module.exports = {
 
     sayHelloInPersian: function() {
         return "Salam";
-    }
+    },
+
+    sayHelloInPortuguese: function() {
+        return "Olá";
+    },
 };

@@ -536,6 +536,16 @@ Now if you browse `localhost:3000` you should see the index page.
 
 For this example I have used [this free bootstrap template](http://startbootstrap.com/template-overviews/freelancer/). 
 
+## Data Access
+There are various types of API available for data storage and data access such as `db-info`, `any-db`, `db-mysql`, `mangodb`, `mangoos` and alot more that you can install them via `npm`.
+But for this example I have used [Nedb] which is like `SQLite`.
+
+>Nedb is an embedded persistent database for Node.js, written in Javascript, with no dependency (except npm modules of course). You can think of it as a SQLite for Node.js projects, which can be used with a simple require statement. The API is a subset of MongoDB's. You can use it as a persistent or an in-memory only datastore.
+
+```
+npm install nedb --save 
+```
+
 
 ## Heroku Deployment
 coming soon...
