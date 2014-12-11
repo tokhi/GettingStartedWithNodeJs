@@ -30,21 +30,6 @@ app.use('/new', routes);
 // app.use('/movies', routes);
 app.use('/users', users);
 
-/* POST movie */
-// app.post('/movies', function(req, res) {
-//     console.log("the post method..")
-//     console.log(req.body);
-//     var doc = {
-//         name: req.body.name,
-//         rating: req.body.rating,
-//         availability: req.body.availability,
-//         review: req.body.review
-//     }
-//     db.saveMovie(doc);
-// });
-
-// the movie json file
-// app.locals.moviesData = require('./movies.json');
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

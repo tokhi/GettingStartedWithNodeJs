@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<% include head.ejs %>
+<% include partials/head.ejs %>
 
 <body id="page-top" class="index">
 
     <!-- navigation -->
-    <% include nav.ejs %>
+    <% include partials/nav.ejs %>
 
-    <% include header.ejs %>
+    <% include partials/header.ejs %>
 
-    <% include profolio.ejs %>
+    <% include partials/profolio.ejs %>
 
-     <% include about.ejs %>
+     <% include partials/about.ejs %>
 
-   	<% include contact.ejs %>
+   	<% include partials/contact.ejs %>
 
-    <% include footer.ejs %>
+    <% include partials/footer.ejs %>
 
     <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
     <div class="scroll-top page-scroll visible-xs visble-sm">
@@ -26,10 +26,10 @@
     </div>
 
     <% for(var i=1; i<moviesData.length; i++){ %>
-    <% include single_profolio.ejs %>
+    <% include partials/single_profolio.ejs %>
     <% } %>
 
-   <% include jsfile.ejs %>
+   <% include partials/jsfile.ejs %>
 
 </body>
 
