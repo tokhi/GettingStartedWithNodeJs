@@ -1,6 +1,6 @@
 # Up and running with Nodejs & Expressjs
 
->Node.js® is a platform built on [Chrome's JavaScript runtime](https://code.google.com/p/v8/) for easily building fast, scalable network applications. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient, perfect for data-intensive real-time applications that run across distributed devices.
+>Node.js® is a platform built on [Chrome's JavaScript runtime](https://code.google.com/p/v8/) for easily building fast, scalable network applications. Node.js uses an event-driven, [non-blocking I/O model](http://stackoverflow.com/questions/10570246/what-is-non-blocking-or-asynchronous-i-o-in-node-js) that makes it lightweight and efficient, perfect for data-intensive real-time applications that run across distributed devices.
 
 install nodejs under ubuntu:
 
