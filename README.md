@@ -538,9 +538,9 @@ For this example I have used [this free bootstrap template](http://startbootstra
 
 ## Data Access
 There are various types of API available for data storage and data access such as `db-info`, `any-db`, `db-mysql`, `mangodb`, `mangoos` and alot more that you can install them via `npm`.
-But for this example I have used [Nedb] which is like `SQLite`.
+But for this example I have used [Nedb](https://github.com/louischatriot/nedb) which is like `SQLite`.
 
->Nedb is an embedded persistent database for Node.js, written in Javascript, with no dependency (except npm modules of course). You can think of it as a SQLite for Node.js projects, which can be used with a simple require statement. The API is a subset of MongoDB's. You can use it as a persistent or an in-memory only datastore.
+>**Nedb** is an embedded persistent database for Node.js, written in Javascript, with no dependency (except npm modules of course). You can think of it as a SQLite for Node.js projects, which can be used with a simple require statement. The API is a subset of MongoDB's. You can use it as a persistent or an in-memory only datastore.
 
 ```
 npm install nedb --save 
