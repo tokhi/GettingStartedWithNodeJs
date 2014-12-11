@@ -606,7 +606,9 @@ Read more [here](http://callbackhell.com/).
 
 
 ## Heroku Deployment
-coming soon...
+[Deploying node.js app to heroku](https://devcenter.heroku.com/articles/deploying-nodejs).
+
+**Will add the steps and the url later...**
 
 ---
 More parts coming next...
