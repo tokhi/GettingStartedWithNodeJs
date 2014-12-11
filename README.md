@@ -121,7 +121,7 @@ module.exports = {
     },
 
     sayHelloInPortuguese: function() {
-        return “Olá”;
+        return "Olá";
     },
 };
 ```
