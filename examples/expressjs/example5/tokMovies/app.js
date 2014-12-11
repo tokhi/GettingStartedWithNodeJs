@@ -27,7 +27,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 app.use('/movies/:id', routes);
 app.use('/new', routes);
-app.use('/movies', routes);
+// app.use('/movies', routes);
 app.use('/users', users);
 
 /* POST movie */

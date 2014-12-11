@@ -1,4 +1,4 @@
-# Up and running with Nodejs & Expresjs
+# Up and running with Nodejs & Expressjs
 
 >Node.js® is a platform built on [Chrome's JavaScript runtime](https://code.google.com/p/v8/) for easily building fast, scalable network applications. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient, perfect for data-intensive real-time applications that run across distributed devices.
 
@@ -149,11 +149,11 @@ Restart the server, then you should see the changes.
 See the full example [here](https://github.com/tokhi/GettingStartedWithNodeJs/tree/master/examples/nodejs/example2)
 
 ## What is express.js
-According to above `nodejs` basics you may find out that nodejs is quite tiny for building web applications. So for that it requires you to use `expre.js`.
+According to above `nodejs` basics you may find out that nodejs is quite tiny for building web applications. So for that it requires you to use `express.js`.
 
 Express is a light-weight web application framework to help organize your web application into an MVC architecture on the server side. You can use a variety of choices for your templating language (like [EJS](http://www.embeddedjs.com/), [Jade](http://jade-lang.com/), and [Dust.js](http://akdubya.github.io/dustjs/)).
 
-You can then use a database like `MongoDB` with `Mongoose` (for modeling) to provide a backend for your `Node.js` application. `Express.js` basically helps you manage everything, from routes, to handling requests and views.
+You can then use a database like `MongoDB` with `Mongoose` (for modeling), `CouchDB`, `Nedb` and so on to provide a backend for your `Node.js` application. `Express.js` basically helps you manage everything, from routes, to handling requests and views.
 
 
 ### Express.js installation

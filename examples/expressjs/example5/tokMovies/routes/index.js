@@ -1,29 +1,43 @@
 var express = require('express');
 var router = express.Router();
-var movies = require('../movies.json');
+// var movies = require('../movies.json');
 var db = require("../db/nedb");
 // var bodyParser = require('body-parser');
 
 /* GET home page. */
 router.get('/', function(req, res) {
-    res.render('index', {
+	var movies = db.getAllMovies();
+
+	movies.then(function(result){
+		res.render('index', {
         title: 'Express',
-       	moviesData: movies
+       	moviesData: result,
+ 		movie: result[0]
     });
+	},
+	function(error){
+	    throw error;
+	});
+
+	// console.log(movies);
+    
 });
 
 /* GET movie  */
 router.get('/movies/:id', function(req, res) {
     var id = req.params.id
-        // get movie by id
-    var movie = movies.filter(function(item) {
-        return item.id == id;
-    });
+    var movie = db.findMovie(id);
 
-    res.render('/movie', {
+	movie.then(function(result){
+		console.log(result);
+		res.render('movie', {
         title: 'Express',
-        moviesData: movie
+       	movie: result
     });
+	},
+	function(error){
+	    throw error;
+	});
 });
 
 /* new movie */
@@ -35,7 +49,7 @@ router.get('/new', function(req, res) {
 });
 
 /* POST movie */
-router.post('/movies', function(req, res) {
+router.post('/new', function(req, res) {
 	var doc = {
 		name: req.body.name,
     	rating: req.body.rating,
@@ -47,5 +61,20 @@ router.post('/movies', function(req, res) {
     db.saveMovie(doc);
     res.redirect('/');
 });
+
+/* POST movie */
+router.post('/rate', function(req, res) {
+	// var doc = {
+	// 	name: req.body.name,
+    	rating: req.body.rating;
+ //    	availability: req.body.availability,
+ //    	thumb: req.body.thumb,
+    	// review: req.body.review
+	// }
+
+    db.saveMovie(doc);
+    res.redirect('/');
+});
+
 
 module.exports = router;

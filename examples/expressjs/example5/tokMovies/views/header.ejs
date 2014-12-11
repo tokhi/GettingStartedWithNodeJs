@@ -2,13 +2,13 @@
     <header>
         <div class="container">
             <div class="row">
-                <% if(typeof(moviesData) !== 'undefined') { %>
+                <% if(typeof(movie) !== 'undefined') { %>
                 <div class="col-lg-12">
-                    <img class="img-circle img-responsive" src="<%= moviesData[0].thumb %>" alt="">
+                    <img class="img-circle img-responsive" src="<%= movie.thumb %>" alt="">
                     <div class="intro-text">
-                        <span class="name"><%= moviesData[0].name %></span>
+                        <span class="name"><%= movie.name %></span>
                         <hr class="star-light">
-                        <span class="skills"><%= moviesData[0].review %></span>
+                        <span class="skills"><%= movie.review %></span>
                     </div>
                 </div>
                 <% } %>
