@@ -604,6 +604,7 @@ module.exports = {
 * [localhost:3000/new](http://localhost:3000/new)
 * [localhost:3000/movie/1](http://localhost:3000/movie/1)
 
+** You can see the [demo here](https://tokmovie.herokuapp.com/).
 
 ### Call back hell
 Read more [here](http://callbackhell.com/).
@@ -647,7 +648,7 @@ $ git push heroku master
 To open the app in your browser, type heroku open.
 
 
-![Movie Rater](https://github.com/tokhi/GettingStartedWithNodeJs/tree/master/examples/expressjs/example5/tokMovies/public/images/tokMovie.png)
+![Movie Rater](https://raw.githubusercontent.com/tokhi/GettingStartedWithNodeJs/master/examples/expressjs/example5/tokMovies/public/images/tokMovie.png)
 
 ---
 More parts coming next...
