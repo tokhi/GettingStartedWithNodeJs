@@ -604,7 +604,7 @@ module.exports = {
 * [localhost:3000/new](http://localhost:3000/new)
 * [localhost:3000/movie/1](http://localhost:3000/movie/1)
 
-** You can see the [demo here](https://tokmovie.herokuapp.com/).
+** You can see the [demo here](https://tokmovie.herokuapp.com/).**
 
 ### Call back hell
 Read more [here](http://callbackhell.com/).
