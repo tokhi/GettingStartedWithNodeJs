@@ -648,7 +648,7 @@ $ git push heroku master
 To open the app in your browser, type heroku open.
 
 
-![Movie Rater](https://raw.githubusercontent.com/tokhi/GettingStartedWithNodeJs/master/examples/expressjs/example5/tokMovies/public/images/tokMovie.png)
+![Movie Rater](https://raw.githubusercontent.com/tokhi/GettingStartedWithNodeJs/master/examples/expressjs/example5/tokMovies/public/images/tokMovie.png =400x620)
 
 ---
 More parts coming next...
