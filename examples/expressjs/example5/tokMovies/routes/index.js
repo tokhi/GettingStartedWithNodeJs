@@ -40,11 +40,10 @@ router.get('/movies/:id', function(req, res) {
 });
 
 /* new movie */
-router.get('/new', function(req, res) {
+router.get('/:id', function(req, res) {
+	var id = req.params.id
 
-    res.render('new', {
-        title: 'Express'
-    });
+     res.redirect('/movies/'+id);
 });
 
 /* POST movie */
