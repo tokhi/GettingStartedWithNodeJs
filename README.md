@@ -611,9 +611,43 @@ Read more [here](http://callbackhell.com/).
 
 
 ## Heroku Deployment
-[Deploying node.js app to heroku](https://devcenter.heroku.com/articles/deploying-nodejs).
 
-**Will add the steps and the url later...**
+Prevent build artifacts from going into revision control by creating a `.gitignore` file that looks something like this:
+
+```bash
+/node_modules
+npm-debug.log
+.DS_Store
+/*.env
+```
+
+**Deploy your application to Heroku**
+
+After you commit your changes to git, you can deploy your app to Heroku.
+
+```bash
+$ git add .
+$ git commit -m "heroku deployment"
+$ heroku login
+Enter your Heroku credentials.
+...
+Authentication successful.
+$ heroku create
+Creating arcane-lowlands-8408... done, stack is cedar
+http://arcane-lowlands-8408.herokuapp.com/ | git@heroku.com:arcane-lowlands-8408.git
+Git remote heroku added
+$ git push heroku master
+...
+-----> Node.js app detected
+...
+-----> Launching... done
+       http://arcane-lowlands-8408.herokuapp.com deployed to Heroku
+```
+
+To open the app in your browser, type heroku open.
+
+
+![Movie Rater](https://github.com/tokhi/GettingStartedWithNodeJs/tree/master/examples/expressjs/example5/tokMovies/public/images/tokMovie.png)
 
 ---
 More parts coming next...
