@@ -63,7 +63,7 @@ router.post('/new', function(req, res) {
 
 /* Rate movie */
 router.post('/rate', function(req, res) {
-    /* To-do...   */
+    /* To-do...  Your Exercise ;)  */
 });
 
 

@@ -600,9 +600,14 @@ module.exports = {
     
 };
 ```
+* [localhost:3000](localhost:3000)
+* [localhost:3000/new](localhost:3000/new)
+* [localhost:3000/movie/1](localhost:3000/movie/1)
+
 
 ### Call back hell
 Read more [here](http://callbackhell.com/).
+
 
 
 ## Heroku Deployment
