@@ -600,9 +600,9 @@ module.exports = {
     
 };
 ```
-* [localhost:3000](localhost:3000)
-* [localhost:3000/new](localhost:3000/new)
-* [localhost:3000/movie/1](localhost:3000/movie/1)
+* [localhost:3000](http://localhost:3000)
+* [localhost:3000/new](http://localhost:3000/new)
+* [localhost:3000/movie/1](http://localhost:3000/movie/1)
 
 
 ### Call back hell
